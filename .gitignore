@@ -1,0 +1,8 @@
+.env
+backend/serviceAccountKey.json
+__pycache__/
+*.pyc
+.venv/
+.vercel/
+.firebase/
+node_modules/

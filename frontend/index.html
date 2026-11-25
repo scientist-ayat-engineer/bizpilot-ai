@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>BizPilot AI</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#060914">
+</head>
+<body>
+
+<section id="land" class="hide">
+  <header class="ln">
+    <div class="brand"><i></i>BizPilot AI</div>
+    <nav aria-label="Site"><button data-go="lf">Features</button><button data-go="lp">Pricing</button><button data-go="lq">FAQ</button></nav>
+    <button class="btn ghost" id="lsi">Sign in</button><button class="btn" id="lst">Start free</button>
+  </header>
+  <div class="hero">
+    <div>
+      <span class="chip">Made for small shops and local businesses</span>
+      <h1>Know your shop’s <span class="grad">profit</span> in 60 seconds.</h1>
+      <p>Upload your monthly sales and kharcha. Three AI agents study the numbers, spot mistakes in your entries and write a clear report. No accounting degree needed. Apni dukaan ka hisaab, ab aasan.</p>
+      <div class="row"><button class="btn" id="lh">Try it free</button><button class="btn ghost" data-go="lp">See pricing</button></div>
+    </div>
+    <div class="card">
+      <h2>June summary</h2>
+      <div class="kpis" style="grid-template-columns:1fr 1fr;margin:0 0 12px"><div class="card kpi"><div class="l">Net profit</div><div class="v">Rs 39,000</div><div class="d up">39.4% margin</div></div><div class="card kpi"><div class="l">Best month</div><div class="v">May</div><div class="d up">Rs 21,000 sales</div></div></div>
+      <div class="warn" style="margin:0"><span><b>Heads up:</b> March expenses look 8 times higher than usual. Please check the entry.</span></div>
+    </div>
+  </div>
+  <div class="sec" id="lf">
+    <h2>Everything a shop owner needs</h2><p class="sub">No spreadsheets to fight with. Upload, ask, decide.</p>
+    <div class="g3">
+      <div class="card"><b>Upload your records</b><p>Drop a CSV made from Excel or your khata. Charts and totals appear in seconds.</p></div>
+      <div class="card"><b>Three AI agents</b><p>A manager, an analyst and an executive agent discuss your numbers and write the report.</p></div>
+      <div class="card"><b>Mistake catcher</b><p>Extra zero in an expense? BizPilot flags it and suggests a fix before it ruins your totals.</p></div>
+      <div class="card"><b>Ask in Roman Urdu</b><p>Type “Mera kharcha kitna hai?” and get a straight answer from your own data.</p></div>
+      <div class="card"><b>Forecast and what-if</b><p>See the next 3 months, and test what happens if you cut costs by 10%.</p></div>
+      <div class="card"><b>PDF reports</b><p>Share a clean report with your partner, accountant or bank.</p></div>
+    </div>
+  </div>
+  <div class="sec" id="lp">
+    <h2>Simple monthly pricing</h2><p class="sub">Start free. Upgrade when your shop needs more. Pay by JazzCash, Easypaisa or bank transfer.</p>
+    <div id="lplans"></div>
+  </div>
+  <div class="sec" id="lq">
+    <h2>Questions</h2>
+    <details><summary>Do I need to know accounting?</summary><p>No. You only need your monthly sales and expenses. The agents explain everything in plain words.</p></details>
+    <details><summary>How do I pay?</summary><p>Pay with JazzCash, Easypaisa or a bank transfer, then enter your transaction ID. Your plan is activated once the payment is verified.</p></details>
+    <details><summary>Can I cancel anytime?</summary><p>Yes. Plans are monthly with no contract. When a paid month ends, you move back to Free.</p></details>
+    <details><summary>Is my data private?</summary><p>Your sales data is only used to create your own reports and is never shown to other users.</p></details>
+  </div>
+  <div class="foot2"><span>BizPilot AI</span><span>Privacy</span><span>Terms</span><span>Contact: your email here</span></div>
+</section>
+
+<section id="login" class="hide">
+  <div>
+    <div class="brand"><i></i>BizPilot AI</div>
+    <h1>Your business, reviewed by <span class="grad">three AI agents.</span></h1>
+    <p class="sub">Upload your monthly sales and expenses. A manager, an analyst and an executive agent discuss the numbers and hand you a finished report.</p>
+    <div class="pitch"><span>CSV upload</span><span>Live agent chat</span><span>KPI charts</span><span>PDF report</span><span>Saved history</span></div>
+  </div>
+  <form class="card lf" id="lf">
+    <h2>Sign in</h2>
+    <label>Email<input id="em" type="email" placeholder="you@company.com" required autocomplete="email"></label>
+    <label>Password<input id="pw" type="password" placeholder="At least 6 characters" minlength="6" required autocomplete="current-password"></label>
+    <button class="btn" type="submit">Sign in</button>
+    <button class="btn ghost" type="button" id="demo">Try the demo account</button>
+    <button class="btn ghost hide" type="button" id="signup">Create account</button>
+  </form>
+</section>
+
+<div id="app" class="hide">
+  <nav class="side" aria-label="Main">
+    <div class="brand"><i></i>BizPilot AI</div>
+    <a href="#dashboard" data-v="dashboard">Dashboard</a>
+    <a href="#agents" data-v="agents">Agent room</a>
+    <a href="#reports" data-v="reports">Report</a>
+    <a href="#insights" data-v="insights">Insights</a>
+    <a href="#history" data-v="history">History</a>
+    <a href="#billing" data-v="billing">Billing</a>
+    <a href="#admin" data-v="admin" id="adminlink" class="hide">Admin</a>
+    <a href="#settings" data-v="settings">Settings</a>
+  </nav>
+  <main>
+    <div class="bar">
+      <div><h1 id="pt">Dashboard</h1></div>
+      <span class="chip sp" id="who"></span>
+      <button class="btn ghost" id="out">Sign out</button>
+    </div>
+
+    <section data-view="dashboard">
+      <p class="sub" id="dsub"></p>
+      <div id="warn"></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="cols">
+        <div class="card"><h2>Sales and expenses</h2><div class="chart"><svg id="c1" viewBox="0 0 560 250" role="img" aria-label="Monthly sales and expenses"></svg></div>
+          <div class="legend"><span><i style="background:var(--c1)"></i>Sales</span><span><i style="background:var(--c2)"></i>Expenses</span></div></div>
+        <div class="card"><h2>Monthly profit</h2><div class="chart"><svg id="c2" viewBox="0 0 360 250" role="img" aria-label="Monthly profit"></svg></div></div>
+      </div>
+      <div class="card">
+        <h2>Your data</h2>
+        <label class="drop" id="drop" tabindex="0">Drop a CSV here or <u>browse files</u><br><span class="mono" style="font-size:12px">columns: month, sales, expenses</span>
+          <input type="file" id="file" accept=".csv,text/csv" class="hide"></label>
+        <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap"><button class="btn" id="run">Run the agent team</button><button class="btn ghost" id="reset">Reset sample data</button></div>
+      </div>
+    </section>
+
+    <section data-view="agents" class="hide">
+      <p class="sub">Watch the three agents work through your data in order.</p>
+      <div class="pipe">
+        <div class="node" id="n0"><b>Business Manager</b><small>Plans the analysis</small></div><div class="link"></div>
+        <div class="node" id="n1"><b>Data Analyst</b><small>Calculates the numbers</small></div><div class="link"></div>
+        <div class="node" id="n2"><b>Executive Agent</b><small>Writes the report</small></div>
+      </div>
+      <div class="chat card" id="chat"><div class="empty">No conversation yet. Press “Run the agent team” on the dashboard or below.</div></div>
+      <div style="margin-top:14px"><button class="btn" id="run2">Run the agent team</button></div>
+    </section>
+
+    <section data-view="reports" class="hide">
+      <div class="card report" id="rep"><div class="empty">No report yet. Run the agent team to create one.</div></div>
+      <div style="margin-top:14px" class="noprint"><button class="btn" id="pdf">Download as PDF</button></div>
+    </section>
+
+    <section data-view="insights" class="hide">
+      <p class="sub">Forecast, business health and a what-if simulator, all based on your current data.</p>
+      <div class="cols">
+        <div class="card"><h2>Forecast for the next 3 months</h2><div class="chart"><svg id="c3" viewBox="0 0 560 250" role="img" aria-label="Sales and expenses forecast"></svg></div>
+          <div class="legend"><span><i style="background:var(--c1)"></i>Sales</span><span><i style="background:var(--c2)"></i>Expenses</span><span>Dashed lines are forecasts</span></div><p class="sub" id="fc" style="margin:10px 0 0"></p></div>
+        <div class="card"><h2>Business health score</h2><div id="hs" style="font-size:46px;font-weight:700"></div><div id="hl" class="sub" style="margin:0"></div><div class="meter"><i id="hm" style="width:0"></i></div><p class="sub" style="margin:12px 0 0;font-size:13px">Based on profit margin, sales growth and data quality.</p></div>
+      </div>
+      <div class="card"><h2>What-if simulator</h2>
+        <div class="sl"><span>Change in sales</span><input type="range" id="ws" min="-20" max="30" value="0" aria-label="Change in sales"><b id="wsv">0%</b></div>
+        <div class="sl"><span>Change in expenses</span><input type="range" id="we" min="-30" max="30" value="0" aria-label="Change in expenses"><b id="wev">0%</b></div>
+        <div class="kpis" id="wi" style="margin:10px 0 0"></div></div>
+    </section>
+
+    <section data-view="admin" class="hide">
+      <p class="sub">Check each payment in your JazzCash, Easypaisa or bank app before you approve it.</p>
+      <div class="list" id="adm"></div>
+    </section>
+
+    <section data-view="billing" class="hide">
+      <p class="sub">Your plan, your monthly usage and upgrades.</p>
+      <div id="bill"></div>
+    </section>
+
+    <section data-view="settings" class="hide">
+      <p class="sub">Built to grow. These modules are planned for the full version.</p>
+      <div class="feats">
+        <div class="card"><b>Groq AI agents</b><p>Real AutoGen agents answer through the FastAPI backend.</p><span class="tag ok">In the backend plan</span></div>
+        <div class="card"><b>Firebase login</b><p>Secure sign-in and per-user report history in Firestore.</p><span class="tag ok">In the backend plan</span></div>
+        <div class="card"><b>Google Sheets import</b><p>Pull sales data directly from a spreadsheet link.</p><span class="tag">Planned</span></div>
+        <div class="card"><b>Weekly email reports</b><p>Automatic report delivered every Monday morning.</p><span class="tag">Planned</span></div>
+        <div class="card"><b>WhatsApp alerts</b><p>Get a message when profit drops or an anomaly appears.</p><span class="tag">Planned</span></div>
+        <div class="card"><b>Urdu and English</b><p>Switch the interface and the agent reports between languages.</p><span class="tag">Planned</span></div>
+        <div class="card"><b>Team workspaces</b><p>Share dashboards with partners and accountants.</p><span class="tag">Planned</span></div>
+        <div class="card"><b>More agents</b><p>Add a Marketing agent or a Risk agent to the same team.</p><span class="tag">Planned</span></div>
+      </div>
+      <div class="card"><h2>Your saved data</h2><p class="sub">Reports are stored in this browser only.</p><button class="btn ghost" id="clr">Clear saved reports</button></div>
+    </section>
+
+    <section data-view="history" class="hide">
+      <p class="sub">Reports you created are saved in this browser.</p>
+      <div class="list" id="hist"></div>
+    </section>
+  </main>
+</div>
+<div class="modal hide" id="pay" role="dialog" aria-modal="true" aria-labelledby="pt2">
+  <form class="card" id="pf">
+    <h2 id="pt2"></h2><p class="sub" id="pamt" style="margin-bottom:12px"></p>
+    <fieldset class="pm"><legend>Pay with</legend>
+      <label><input type="radio" name="pm" value="JazzCash" checked> JazzCash</label>
+      <label><input type="radio" name="pm" value="Easypaisa"> Easypaisa</label>
+      <label><input type="radio" name="pm" value="Bank transfer"> Bank transfer</label>
+    </fieldset>
+    <div class="msg" id="pins"></div>
+    <label class="fl">Your mobile number<input id="pph" required inputmode="tel" placeholder="03XX-XXXXXXX"></label>
+    <label class="fl">Transaction ID<input id="ptid" required placeholder="From your payment confirmation"></label>
+    <div style="display:flex;gap:10px;margin-top:16px"><button class="btn" type="submit">I have paid</button><button class="btn ghost" type="button" id="pc">Cancel</button></div>
+  </form>
+</div>
+<button class="btn fab hide" id="fab" aria-label="Open the BizPilot assistant">Ask BizPilot</button>
+<div class="card bot hide" id="bot" role="dialog" aria-label="BizPilot assistant">
+  <div class="bh"><b>BizPilot assistant</b><button id="bx" aria-label="Close">×</button></div>
+  <div class="bl" id="bl"></div>
+  <div class="sg" id="sg"></div>
+  <div class="bn">Preview: answers come from your data using simple rules. The full project connects this to the Groq model.</div>
+  <form class="bf" id="bf"><input id="bi" placeholder="Ask about your numbers…" autocomplete="off" aria-label="Your question"><button class="btn" type="submit">Send</button></form>
+</div>
+<div class="toast hide" id="toast" role="status"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+<script src="js/live.js"></script>
+</body>
+</html>
