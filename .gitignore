@@ -6,3 +6,4 @@ __pycache__/
 .vercel/
 .firebase/
 node_modules/
+firebase-debug.log

@@ -22,7 +22,7 @@
   <img src="https://img.shields.io/badge/Made%20in-Pakistan-01411C?style=for-the-badge" alt="Made in Pakistan">
 </p>
 
-[**Live Demo**](https://your-project.web.app) &nbsp;•&nbsp; [**API Docs**](https://your-api.vercel.app/docs) &nbsp;•&nbsp; [**Presentation**](docs/BizPilot_AI_Presentation.pptx) &nbsp;•&nbsp; [**Report Issues**](../../issues)
+[**Live Demo**](https://bizpilot-ai-794a0.web.app) &nbsp;•&nbsp; [**API Docs**](https://bizpilot-ai-rho.vercel.app/docs) &nbsp;•&nbsp; [**Presentation**](docs/BizPilot_AI_Presentation.pptx) &nbsp;•&nbsp; [**Report Issues**](../../issues)
 
 </div>
 
@@ -195,7 +195,7 @@ bizpilot-ai/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/bizpilot-ai.git
+git clone https://github.com/scientistayat-engineer/bizpilot-ai.git
 cd bizpilot-ai
 ```
 
